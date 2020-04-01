@@ -18,4 +18,5 @@ class Plotter:
         sns.distplot(resid)
         plt.title('The Residuals histogram plot')
         plt.ylabel('Distribution')
+        plt.xlabel('Residuals')
         plt.show()
