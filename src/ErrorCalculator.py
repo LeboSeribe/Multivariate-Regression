@@ -24,5 +24,15 @@ class ErrorCalculator:
         mse = self.get_mse()
         RMSE = sqrt(mse)
         return RMSE
+    
+    
+    def error_summary(self):
+        resids= self.get_standardised_residuals()
+        print('error summary:')
+        print(f'average standard residuals: {resids.mean()}')
+        print(f'minimum standard residuals: {min(resids)}')
+        print(f'maximum standard residuals: {max(resids)}')
+        print(f'MSE: {self.get_mse()}')
+        print(f'RMSE: {self.get_rmse()}')
         
         
